@@ -1,0 +1,135 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    max-height: 100vh;
+    padding: 15px 50px;
+    font-family: sans-serif;
+}
+body header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+}
+header>a img{
+    width: 130px;
+}
+header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header .nav li a{
+    padding: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+}
+header .nav li a:hover{
+    color:orange;
+}
+header .nav .search-box input{
+    outline: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border:2px solid orange;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+header .nav .search-box input::placeholder{
+    transition:0.3s;
+    color:#777;
+}
+header .nav .search-box input:focus::placeholder{
+    opacity: 0;
+}
+header .nav .search-box span{
+    background-color: rgba(255, 166, 0, 0.7);
+    padding: 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+header .nav .search-box span:hover{
+    background-color: rgba(255, 166, 0, 1);
+}
+header .nav .search-box span i{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* end header  */
+/* start main section  */
+.main-section {
+    height: calc(100vh - 88px);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+@media (max-width:767px) {
+    .main-section{
+        flex-direction: column;
+    }
+}
+.main-section .left{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+.main-section .left h1{
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.main-section .left p{
+    line-height:1.7;
+    margin-left: 15px;
+    font-size: 18px;
+    color: #333;
+
+}
+.main-section .left a{
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid orange;
+    background-image: linear-gradient(to right ,orange , yellow);
+    width: fit-content;
+
+}
+.main-section .right{
+    padding: 20px;
+    width: 50%;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to left bottom , orange , yellow);
+    border-radius:30% 70% 70% 30% / 30% 42% 58% 70% ;
+}
+.main-section .right img{
+    max-width: 80%;
+    transform: rotate(10deg);
+    transition: 0.6s;
+}
+.main-section .right:hover img{
+    transform: rotate(-5deg);
+}
+/* end main section  */
